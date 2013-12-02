@@ -5,7 +5,6 @@
 <title>Go Cart<?php echo (isset($page_title))?' :: '.$page_title:''; ?></title>
 
 <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet" type="text/css" />
-<link href="<?php echo base_url('assets/css/bootstrap-responsive.min.css');?>" rel="stylesheet" type="text/css" />
 <link type="text/css" href="<?php echo base_url('assets/css/jquery-ui.css');?>" rel="stylesheet" />
 <link type="text/css" href="<?php echo base_url('assets/css/redactor.css');?>" rel="stylesheet" />
 

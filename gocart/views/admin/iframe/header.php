@@ -5,7 +5,6 @@
 <title>Go Cart</title>
 
 <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet" type="text/css" />
-<link href="<?php echo base_url('assets/css/bootstrap-responsive.min.css');?>" rel="stylesheet" type="text/css" />
 <link type="text/css" href="<?php echo base_url('assets/css/jquery-ui.css');?>" rel="stylesheet" />
 
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>

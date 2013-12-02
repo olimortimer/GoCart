@@ -13,7 +13,6 @@
 <?php endif;?>
 
 <?php echo theme_css('bootstrap.min.css', true);?>
-<?php echo theme_css('bootstrap-responsive.min.css', true);?>
 <?php echo theme_css('styles.css', true);?>
 
 <?php echo theme_js('jquery.min.js', true);?>
