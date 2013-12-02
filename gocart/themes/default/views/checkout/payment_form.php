@@ -12,7 +12,7 @@
 <?php include('order_details.php');?>
 
 	<div class="row">
-		<div class="span12">
+		<div class="col-lg-12">
 			<h2><?php echo lang('payment_method');?></h2>
 			<div class="tabbable tabs-left">
 				<ul class="nav nav-tabs">

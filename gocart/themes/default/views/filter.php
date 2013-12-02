@@ -18,7 +18,7 @@
 	</div>
 
 	<div class="row">
-			<div class="span12">
+			<div class="col-lg-12">
 			
 			<?php if(count($products) > 0):?>
 				
@@ -35,7 +35,7 @@
 				<br style="clear:both;"/>
 				<ul class="thumbnails category_container">
 				<?php foreach($products as $product):?>
-					<li class="span3 product">
+					<li class="col-lg-3 product">
 						<?php
 						$photo	= theme_img('no_picture.png', lang('no_image_available'));
 						$product->images	= array_values($product->images);
@@ -59,7 +59,7 @@
 						</a>
 						<h5 style="margin-top:5px;"><a href="<?php echo site_url(implode('/', $base_url).'/'.$product->slug); ?>"><?php echo $product->name;?></a>
 						<?php if($this->admin_session->userdata('admin')): ?>
-						<a class="btn" title="<?php echo lang('edit_product'); ?>" href="<?php echo  site_url($this->config->item('admin_folder').'/products/form/'.$product->id); ?>"><i class="icon-pencil"></i></a>
+						<a class="btn" title="<?php echo lang('edit_product'); ?>" href="<?php echo  site_url($this->config->item('admin_folder').'/products/form/'.$product->id); ?>"><i class="glyphicon glyphicon-pencil"></i></a>
 						<?php endif; ?></h5>
 						<?php if($product->excerpt != ''): ?>
 						<div class="excerpt"><?php echo $product->excerpt; ?></div>

@@ -1,6 +1,6 @@
 <?php if(!empty($category->description)): ?>
 <div class="row">
-    <div class="span12"><?php echo $category->description; ?></div>
+    <div class="col-lg-12"><?php echo $category->description; ?></div>
 </div>
 <?php endif; ?>
         
@@ -10,7 +10,7 @@
     $cols = 4;
     if(isset($category)):?>
         <?php if(isset($this->categories[$category->id] ) && count($this->categories[$category->id]) > 0): $cols=3; ?>
-            <div class="span3">
+            <div class="col-lg-3">
                 <ul class="nav nav-list well">
                     <li class="nav-header">
                     <?php echo lang('subcategories'); ?>
@@ -22,12 +22,12 @@
                 </ul>
             </div>
         
-            <div class="span9">
+            <div class="col-lg-9">
         <?php endif;?>
     <?php endif;?>
     
     <?php if($cols == 4):?>
-        <div class="span12">
+        <div class="col-lg-12">
     <?php endif;?>
     
     <?php if(count($products) == 0):?>
@@ -42,10 +42,10 @@
               } 
         ?>
         <div class="row" style="margin-top:20px; margin-bottom:15px">
-            <div class="span6">
+            <div class="col-lg-6">
                 <?php echo $this->pagination->create_links();?>
             </div>
-            <div class="span3 pull-right">
+            <div class="col-lg-3 pull-right">
                 <select id="sort_products" onchange="window.location='<?php echo site_url(uri_string());?>/'+$(this).val();">
                     <option value=''><?php echo lang('default');?></option>
                     <option<?php echo(!empty($_GET['by']) && $_GET['by']=='name/asc')?' selected="selected"':'';?> value="?by=name/asc"><?php echo lang('sort_by_name_asc');?></option>
@@ -65,7 +65,7 @@
                     <div class="row">
                 <?php endif;?>
 
-                <div class="span3 product">
+                <div class="col-lg-3 product">
                     <div>
                         <?php
                         $photo  = theme_img('no_picture.png', lang('no_image_available'));
@@ -93,7 +93,7 @@
                         <h5 style="margin-top:5px;">
                             <a href="<?php echo site_url(implode('/', $base_url).'/'.$product->slug); ?>"><?php echo $product->name;?></a>
                             <?php if($this->session->userdata('admin')): ?>
-                                <a class="btn" title="<?php echo lang('edit_product'); ?>" href="<?php echo  site_url($this->config->item('admin_folder').'/products/form/'.$product->id); ?>"><i class="icon-pencil"></i></a>
+                                <a class="btn" title="<?php echo lang('edit_product'); ?>" href="<?php echo  site_url($this->config->item('admin_folder').'/products/form/'.$product->id); ?>"><i class="glyphicon glyphicon-pencil"></i></a>
                             <?php endif; ?>
                         </h5>
 

@@ -5,10 +5,10 @@
     }
 </script>
 <div class="row">
-    <div class="span4">
+    <div class="col-lg-4">
         
         <div class="row">
-            <div class="span4" id="primary-img">
+            <div class="col-lg-4" id="primary-img">
                 <?php
                 $photo  = theme_img('no_picture.png', lang('no_image_available'));
                 $product->images    = array_values($product->images);
@@ -32,30 +32,30 @@
         </div>
         <?php if(!empty($primary->caption)):?>
         <div class="row">
-            <div class="span4" id="product_caption">
+            <div class="col-lg-4" id="product_caption">
                 <?php echo $primary->caption;?>
             </div>
         </div>
         <?php endif;?>
         <?php if(count($product->images) > 1):?>
         <div class="row">
-            <div class="span4 product-images">
+            <div class="col-lg-4 product-images">
                 <?php foreach($product->images as $image):?>
-                <img class="span1" onclick="$(this).squard('390', $('#primary-img'));" src="<?php echo base_url('uploads/images/medium/'.$image->filename);?>"/>
+                <img class="col-lg-1" onclick="$(this).squard('390', $('#primary-img'));" src="<?php echo base_url('uploads/images/medium/'.$image->filename);?>"/>
                 <?php endforeach;?>
             </div>
         </div>
         <?php endif;?>
     </div>
-    <div class="span8 pull-right">
+    <div class="col-lg-8 pull-right">
         
         <div class="row">
-            <div class="span8">
+            <div class="col-lg-8">
                 <div class="page-header">
                     <h2 style="font-weight:normal">
                         <?php echo $product->name;?>
                         <?php if($this->session->userdata('admin')): ?>
-                        <a class="btn" title="<?php echo lang('edit_product'); ?>" href="<?php echo  site_url($this->config->item('admin_folder').'/products/form/'.$product->id); ?>"><i class="icon-pencil"></i></a>
+                        <a class="btn" title="<?php echo lang('edit_product'); ?>" href="<?php echo  site_url($this->config->item('admin_folder').'/products/form/'.$product->id); ?>"><i class="glyphicon glyphicon-pencil"></i></a>
                         <?php endif; ?>
                         <span class="pull-right">
                             <?php if($product->saleprice > 0):?>
@@ -72,24 +72,24 @@
         </div>
         
         <div class="row">
-            <div class="span8">
+            <div class="col-lg-8">
                 <?php echo $product->excerpt;?>
             </div>
         </div>
         
         <div class="row" style="margin-top:15px; margin-bottom:15px;">
-            <div class="span4 sku-pricing">
+            <div class="col-lg-4 sku-pricing">
                 <?php if(!empty($product->sku)):?><div><?php echo lang('sku');?>: <?php echo $product->sku; ?></div><?php endif;?>&nbsp;
             </div>
             <?php if((bool)$product->track_stock && $product->quantity < 1 && config_item('inventory_enabled')):?>
-            <div class="span4 out-of-stock">
+            <div class="col-lg-4 out-of-stock">
                 <div><?php echo lang('out_of_stock');?></div>
             </div>
             <?php endif;?>
         </div>
         
         <div class="row">
-            <div class="span8">
+            <div class="col-lg-8">
                 <div class="product-cart-form">
                     <?php echo form_open('cart/add_to_cart', 'class="form-horizontal"');?>
                     <input type="hidden" name="cartkey" value="<?php echo $this->session->flashdata('cartkey');?>" />
@@ -139,12 +139,12 @@
 
                                 if($option->type == 'textfield'):?>
                                     <div class="controls">
-                                        <input type="text" name="option[<?php echo $option->id;?>]" value="<?php echo $value;?>" class="span4"/>
+                                        <input type="text" name="option[<?php echo $option->id;?>]" value="<?php echo $value;?>" class="col-lg-4"/>
                                         <?php echo $required;?>
                                     </div>
                                 <?php elseif($option->type == 'textarea'):?>
                                     <div class="controls">
-                                        <textarea class="span4" name="option[<?php echo $option->id;?>]"><?php echo $value;?></textarea>
+                                        <textarea class="col-lg-4" name="option[<?php echo $option->id;?>]"><?php echo $value;?></textarea>
                                         <?php echo $required;?>
                                     </div>
                                 <?php elseif($option->type == 'droplist'):?>
@@ -210,9 +210,9 @@
                         <div class="controls">
                             <?php if(!config_item('inventory_enabled') || config_item('allow_os_purchase') || !(bool)$product->track_stock || $product->quantity > 0) : ?>
                                 <?php if(!$product->fixed_quantity) : ?>
-                                    <input class="span2" type="text" name="quantity" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input class="col-lg-2" type="text" name="quantity" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <?php endif; ?>
-                                <button class="btn btn-primary btn-large" type="submit" value="submit"><i class="icon-shopping-cart icon-white"></i> <?php echo lang('form_add_to_cart');?></button>
+                                <button class="btn btn-primary btn-large" type="submit" value="submit"><i class="glyphicon glyphicon-shopping-cart glyphicon-white"></i> <?php echo lang('form_add_to_cart');?></button>
                             <?php endif;?>
                         </div>
                     </div>
@@ -225,7 +225,7 @@
         </div>
         
         <div class="row" style="margin-top:15px;">
-            <div class="span8">
+            <div class="col-lg-8">
                 <?php echo $product->description; ?>
             </div>
         </div>
@@ -235,11 +235,11 @@
     <?php if(!empty($product->related_products)):?>
     <div class="related_products">
         <div class="row">
-            <div class="span4">
+            <div class="col-lg-4">
                 <h3 style="margin-top:20px;"><?php echo lang('related_products_title');?></h3>
                 <ul class="thumbnails"> 
                 <?php foreach($product->related_products as $relate):?>
-                    <li class="span2 product">
+                    <li class="col-lg-2 product">
                         <?php
                         $photo  = theme_img('no_picture.png', lang('no_image_available'));
                         
@@ -266,7 +266,7 @@
                         </a>
                         <h5 style="margin-top:5px;"><a href="<?php echo site_url($relate->slug); ?>"><?php echo $relate->name;?></a>
                         <?php if($this->admin_session->userdata('admin')): ?>
-                        <a class="btn" title="<?php echo lang('edit_product'); ?>" href="<?php echo  site_url($this->config->item('admin_folder').'/products/form/'.$relate->id); ?>"><i class="icon-pencil"></i></a>
+                        <a class="btn" title="<?php echo lang('edit_product'); ?>" href="<?php echo  site_url($this->config->item('admin_folder').'/products/form/'.$relate->id); ?>"><i class="glyphicon glyphicon-pencil"></i></a>
                         <?php endif; ?>
                         </h5>
 

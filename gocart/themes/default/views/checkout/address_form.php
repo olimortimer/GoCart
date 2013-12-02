@@ -110,15 +110,15 @@ else
 
 //form elements
 
-$company	= array('placeholder'=>lang('address_company'),'class'=>'address span8', 'name'=>'company', 'value'=> set_value('company', @$customer[$address_form_prefix.'_address']['company']));
-$address1	= array('placeholder'=>lang('address1'), 'class'=>'address span8', 'name'=>'address1', 'value'=> set_value('address1', @$customer[$address_form_prefix.'_address']['address1']));
-$address2	= array('placeholder'=>lang('address2'), 'class'=>'address span8', 'name'=>'address2', 'value'=>  set_value('address2', @$customer[$address_form_prefix.'_address']['address2']));
-$first		= array('placeholder'=>lang('address_firstname'), 'class'=>'address span4', 'name'=>'firstname', 'value'=>  set_value('firstname', @$customer[$address_form_prefix.'_address']['firstname']));
-$last		= array('placeholder'=>lang('address_lastname'), 'class'=>'address span4', 'name'=>'lastname', 'value'=>  set_value('lastname', @$customer[$address_form_prefix.'_address']['lastname']));
-$email		= array('placeholder'=>lang('address_email'), 'class'=>'address span4', 'name'=>'email', 'value'=> set_value('email', @$customer[$address_form_prefix.'_address']['email']));
-$phone		= array('placeholder'=>lang('address_phone'), 'class'=>'address span4', 'name'=>'phone', 'value'=> set_value('phone', @$customer[$address_form_prefix.'_address']['phone']));
-$city		= array('placeholder'=>lang('address_city'), 'class'=>'address span3', 'name'=>'city', 'value'=> set_value('city', @$customer[$address_form_prefix.'_address']['city']));
-$zip		= array('placeholder'=>lang('address_zip'), 'maxlength'=>'10', 'class'=>'address span2', 'name'=>'zip', 'value'=> set_value('zip', @$customer[$address_form_prefix.'_address']['zip']));
+$company	= array('placeholder'=>lang('address_company'),'class'=>'address col-lg-8', 'name'=>'company', 'value'=> set_value('company', @$customer[$address_form_prefix.'_address']['company']));
+$address1	= array('placeholder'=>lang('address1'), 'class'=>'address col-lg-8', 'name'=>'address1', 'value'=> set_value('address1', @$customer[$address_form_prefix.'_address']['address1']));
+$address2	= array('placeholder'=>lang('address2'), 'class'=>'address col-lg-8', 'name'=>'address2', 'value'=>  set_value('address2', @$customer[$address_form_prefix.'_address']['address2']));
+$first		= array('placeholder'=>lang('address_firstname'), 'class'=>'address col-lg-4', 'name'=>'firstname', 'value'=>  set_value('firstname', @$customer[$address_form_prefix.'_address']['firstname']));
+$last		= array('placeholder'=>lang('address_lastname'), 'class'=>'address col-lg-4', 'name'=>'lastname', 'value'=>  set_value('lastname', @$customer[$address_form_prefix.'_address']['lastname']));
+$email		= array('placeholder'=>lang('address_email'), 'class'=>'address col-lg-4', 'name'=>'email', 'value'=> set_value('email', @$customer[$address_form_prefix.'_address']['email']));
+$phone		= array('placeholder'=>lang('address_phone'), 'class'=>'address col-lg-4', 'name'=>'phone', 'value'=> set_value('phone', @$customer[$address_form_prefix.'_address']['phone']));
+$city		= array('placeholder'=>lang('address_city'), 'class'=>'address col-lg-3', 'name'=>'city', 'value'=> set_value('city', @$customer[$address_form_prefix.'_address']['city']));
+$zip		= array('placeholder'=>lang('address_zip'), 'maxlength'=>'10', 'class'=>'address col-lg-2', 'name'=>'zip', 'value'=> set_value('zip', @$customer[$address_form_prefix.'_address']['zip']));
 
 
 ?>
@@ -128,87 +128,87 @@ $zip		= array('placeholder'=>lang('address_zip'), 'maxlength'=>'10', 'class'=>'a
 	echo ($address_form_prefix == 'bill')?form_open('checkout/step_1'):form_open('checkout/shipping_address');?>
 		<div class="row">
 			<?php // Address form ?>
-			<div class="span8 offset2">
+			<div class="col-lg-8 col-lg-offset-2">
 				<div class="row">
-					<div class="span4">
+					<div class="col-lg-4">
 						<h2 style="margin:0px;">
 							<?php echo ($address_form_prefix == 'bill')?lang('address'):lang('shipping_address');?>
 						</h2>
 					</div>
-					<div class="span4">
+					<div class="col-lg-4">
 						<?php if($this->Customer_model->is_logged_in(false, false)) : ?>
-							<button class="btn btn-inverse pull-right" onclick="$('#address_manager').modal().modal('show');" type="button"><i class="icon-envelope icon-white"></i> <?php echo lang('choose_address');?></button>
+							<button class="btn btn-inverse pull-right" onclick="$('#address_manager').modal().modal('show');" type="button"><i class="glyphicon glyphicon-envelope glyphicon-white"></i> <?php echo lang('choose_address');?></button>
 						<?php endif; ?>
 					</div>
 				</div>
 				
 				<div class="row">
-					<div class="span8">
+					<div class="col-lg-8">
 						<label class="placeholder"><?php echo lang('address_company');?></label>
 						<?php echo form_input($company);?>
 					</div>
 				</div>
 				<div class="row">
-					<div class="span4">
+					<div class="col-lg-4">
 						<label class="placeholder"><?php echo lang('address_firstname');?><b class="r"> *</b></label>
 						<?php echo form_input($first);?>
 					</div>
-					<div class="span4">
+					<div class="col-lg-4">
 						<label class="placeholder"><?php echo lang('address_lastname');?><b class="r"> *</b></label>
 						<?php echo form_input($last);?>
 					</div>
 				</div>
 				<div class="row">
-					<div class="span4">
+					<div class="col-lg-4">
 						<label class="placeholder"><?php echo lang('address_email');?><b class="r"> *</b></label>
 						<?php echo form_input($email);?>
 					</div>
 
-					<div class="span4">
+					<div class="col-lg-4">
 						<label class="placeholder"><?php echo lang('address_phone');?><b class="r"> *</b></label>
 						<?php echo form_input($phone);?>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="span8">
+					<div class="col-lg-8">
 						<label class="placeholder"><?php echo lang('address_country');?><b class="r"> *</b></label>
-						<?php echo form_dropdown('country_id',$countries, @$customer[$address_form_prefix.'_address']['country_id'], 'id="country_id" class="address span8"');?>
+						<?php echo form_dropdown('country_id',$countries, @$customer[$address_form_prefix.'_address']['country_id'], 'id="country_id" class="address col-lg-8"');?>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="span8">
+					<div class="col-lg-8">
 						<label class="placeholder"><?php echo lang('address1');?><b class="r"> *</b></label>
 						<?php echo form_input($address1);?>
 					</div>
 				</div>
 				
 				<div class="row">
-					<div class="span8">
+					<div class="col-lg-8">
 						<label class="placeholder"><?php echo lang('address2');?></label>
 						<?php echo form_input($address2);?>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="span3">
+					<div class="col-lg-3">
 						<label class="placeholder"><?php echo lang('address_city');?><b class="r"> *</b></label>
 						<?php echo form_input($city);?>
 					</div>
-					<div class="span3">
+					<div class="col-lg-3">
 						<label class="placeholder"><?php echo lang('address_state');?><b class="r"> *</b></label>
 						<?php 
-							echo form_dropdown('zone_id',$zone_menu, @$customer[$address_form_prefix.'_address']['zone_id'], 'id="zone_id" class="address span3" ');?>
+							echo form_dropdown('zone_id',$zone_menu, @$customer[$address_form_prefix.'_address']['zone_id'], 'id="zone_id" class="address col-lg-3" ');?>
 					</div>
-					<div class="span2">
+					<div class="col-lg-2">
 						<label class="placeholder"><?php echo lang('address_zip');?><b class="r"> *</b></label>
 						<?php echo form_input($zip);?>
 					</div>
 				</div>
 				<?php if($address_form_prefix=='bill') : ?>
 				<div class="row">
-					<div class="span3">
+					<div class="col-lg-3">
 						<label class="checkbox inline" for="use_shipping">
 						<?php echo form_checkbox(array('name'=>'use_shipping', 'value'=>'yes', 'id'=>'use_shipping', 'checked'=>$use_shipping)) ?>
 						<?php echo lang('ship_to_address') ?>
@@ -218,7 +218,7 @@ $zip		= array('placeholder'=>lang('address_zip'), 'maxlength'=>'10', 'class'=>'a
 				<?php endif ?>
 
 				<div class="row">
-					<div class="span8">
+					<div class="col-lg-8">
 						<?php if($address_form_prefix=='ship') : ?>
 						<input class="btn btn-block btn-large btn-secondary" type="button" value="<?php echo lang('form_previous');?>" onclick="window.location='<?php echo base_url('checkout/step_1') ?>'"/>
 						<?php endif; ?>

@@ -22,7 +22,7 @@ function remove_filter(slug)
 }
 </script>
 <div class="row">
-	<div class="span12">
+	<div class="col-lg-12">
 		<div class="well">
 			Filters
 			<ul>

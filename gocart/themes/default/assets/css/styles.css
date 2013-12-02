@@ -102,11 +102,11 @@ img.responsiveImage
 	display:none;
 }
 
-.category_container .span3{
+.category_container .col-lg-3{
 	overflow:hidden;
 }
 
-.category_container .span3 div{
+.category_container .col-lg-3 div{
 	padding-bottom:9999px;
 	margin-bottom:-9989px;
 }

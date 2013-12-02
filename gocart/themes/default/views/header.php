@@ -37,12 +37,12 @@ if(isset($additional_header_info))
 
 				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+					<span class="glyphicon glyphicon-bar"></span>
+					<span class="glyphicon glyphicon-bar"></span>
+					<span class="glyphicon glyphicon-bar"></span>
 				</a>
 			
-				<a class="brand" href="<?php echo site_url();?>"><?php echo $this->config->item('company_name');?></a>
+				<a class="navbar-brand" href="<?php echo site_url();?>"><?php echo $this->config->item('company_name');?></a>
 				
 				<div class="nav-collapse">
 					<ul class="nav">
@@ -112,7 +112,7 @@ if(isset($additional_header_info))
 					</ul>
 					
 					<?php echo form_open('cart/search', 'class="navbar-search pull-right"');?>
-						<input type="text" name="term" class="search-query span2" placeholder="<?php echo lang('search');?>"/>
+						<input type="text" name="term" class="search-query col-lg-2" placeholder="<?php echo lang('search');?>"/>
 					</form>
 				</div>
 			</div>
@@ -122,7 +122,7 @@ if(isset($additional_header_info))
 	<div class="container">
 		<?php if(!empty($base_url) && is_array($base_url)):?>
 			<div class="row">
-				<div class="span12">
+				<div class="col-lg-12">
 					<ul class="breadcrumb">
 						<?php
 						$url_path	= '';

@@ -13,7 +13,7 @@
 
 <?php echo form_open('checkout/step_2');?>
 	<div class="row">
-		<div class="span6">
+		<div class="col-lg-6">
 				<h2><?php echo lang('shipping_method');?></h2>
 				<div class="alert alert-error" id="shipping_error_box" style="display:none"></div>
 				<table class="table">
@@ -40,9 +40,9 @@
 					<?php endforeach;?>
 				</table>
 		</div>
-		<div class="span6">
+		<div class="col-lg-6">
 			<h2><?php echo lang('shipping_instructions')?></h2>
-			<?php echo form_textarea(array('name'=>'shipping_notes', 'value'=>set_value('shipping_notes', $this->go_cart->get_additional_detail('shipping_notes')), 'class'=>'span6', 'style'=>'height:75px;'));?>
+			<?php echo form_textarea(array('name'=>'shipping_notes', 'value'=>set_value('shipping_notes', $this->go_cart->get_additional_detail('shipping_notes')), 'class'=>'col-lg-6', 'style'=>'height:75px;'));?>
 		</div>
 	</div>
 	<input class="btn btn-block btn-large btn-primary" type="submit" value="<?php echo lang('form_continue');?>"/>

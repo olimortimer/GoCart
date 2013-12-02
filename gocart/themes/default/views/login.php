@@ -1,7 +1,7 @@
 <?php include('header.php'); ?>
 
 <div class="row" style="margin-top:50px;">
-	<div class="span6 offset3">
+	<div class="col-lg-6 col-lg-offset-3">
 		<div class="page-header">
 			<h1><?php echo lang('login');?></h1>
 		</div>
@@ -11,14 +11,14 @@
 					<div class="control-group">
 						<label class="control-label" for="email"><?php echo lang('email');?></label>
 						<div class="controls">
-							<input type="text" name="email" class="span3"/>
+							<input type="text" name="email" class="col-lg-3"/>
 						</div>
 					</div>
 				
 					<div class="control-group">
 						<label class="control-label" for="password"><?php echo lang('password');?></label>
 						<div class="controls">
-							<input type="password" name="password" class="span3" autocomplete="off" />
+							<input type="password" name="password" class="col-lg-3" autocomplete="off" />
 						</div>
 					</div>
 				

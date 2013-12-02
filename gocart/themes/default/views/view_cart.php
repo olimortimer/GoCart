@@ -14,19 +14,19 @@
     
     
     <div class="row">
-        <div class="span5">
+        <div class="col-lg-5">
             <label><?php echo lang('coupon_label');?></label>
-            <input type="text" name="coupon_code" class="span3" style="margin:0px;">
-            <input class="span2 btn" type="submit" value="<?php echo lang('apply_coupon');?>"/>
+            <input type="text" name="coupon_code" class="col-lg-3" style="margin:0px;">
+            <input class="col-lg-2 btn" type="submit" value="<?php echo lang('apply_coupon');?>"/>
             
             <?php if($gift_cards_enabled):?>
                 <label style="margin-top:15px;"><?php echo lang('gift_card_label');?></label>
-                <input type="text" name="gc_code" class="span3" style="margin:0px;">
-                <input class="span2 btn"  type="submit" value="<?php echo lang('apply_gift_card');?>"/>
+                <input type="text" name="gc_code" class="col-lg-3" style="margin:0px;">
+                <input class="col-lg-2 btn"  type="submit" value="<?php echo lang('apply_gift_card');?>"/>
             <?php endif;?>
         </div>
         
-        <div class="span7" style="text-align:right;">
+        <div class="col-lg-7" style="text-align:right;">
                 <input id="redirect_path" type="hidden" name="redirect" value=""/>
     
                 <?php if(!$this->Customer_model->is_logged_in(false,false)): ?>

@@ -18,7 +18,7 @@ function append_filter(slug)
 }	
 </script>
 <div class="row">
-	<div class="span3">
+	<div class="col-lg-3">
 <?php
 		function list_filters($parent_id, $filts) 
 		{ 

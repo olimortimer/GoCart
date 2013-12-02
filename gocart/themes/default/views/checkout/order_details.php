@@ -1,6 +1,6 @@
 <div class="row">
 	<?php if(!empty($customer['bill_address'])):?>
-	<div class="span3">
+	<div class="col-lg-3">
 		<a href="<?php echo site_url('checkout/step_1');?>" class="btn btn-block">
 		
 			<?php if($customer['bill_address'] != @$customer['ship_address'])
@@ -26,7 +26,7 @@
 
 <?php if(config_item('require_shipping')):?>
 	<?php if($this->go_cart->requires_shipping()):?>
-		<div class="span3">
+		<div class="col-lg-3">
 			<a href="<?php echo site_url('checkout/shipping_address');?>" class="btn btn-block"><?php echo lang('shipping_address_button');?></a>
 			<p>
 				<?php echo format_address($customer['ship_address'], true);?>
@@ -40,7 +40,7 @@
 		<?php
 		
 		if(!empty($shipping_method) && !empty($shipping_method['method'])):?>
-		<div class="span3">
+		<div class="col-lg-3">
 			<p><a href="<?php echo site_url('checkout/step_2');?>" class="btn btn-block"><?php echo lang('shipping_method_button');?></a></p>
 			<strong><?php echo lang('shipping_method');?></strong><br/>
 			<?php echo $shipping_method['method'].': '.format_currency($shipping_method['price']);?>
@@ -50,7 +50,7 @@
 <?php endif;?>
 
 <?php if(!empty($payment_method)):?>
-	<div class="span3">
+	<div class="col-lg-3">
 		<p><a href="<?php echo site_url('checkout/step_3');?>" class="btn btn-block"><?php echo lang('billing_method_button');?></a></p>
 		<?php echo $payment_method['description'];?>
 	</div>

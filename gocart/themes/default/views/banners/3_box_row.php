@@ -1,6 +1,6 @@
 <div class="row">
 	<?php foreach($banners as $banner):?>
-	<div class="span4">
+	<div class="col-lg-4">
 		<?php
 		
 		$box_image	= '<img class="responsiveImage" src="'.base_url('uploads/'.$banner->image).'" />';

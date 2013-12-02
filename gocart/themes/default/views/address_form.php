@@ -1,15 +1,15 @@
 <?php
 
 $f_id		= array('id'=>'f_id', 'style'=>'display:none;', 'name'=>'id', 'value'=> set_value('id',$id));
-$f_company	= array('id'=>'f_company', 'class'=>'span12', 'name'=>'company', 'value'=> set_value('company',$company));
-$f_address1	= array('id'=>'f_address1', 'class'=>'span12', 'name'=>'address1', 'value'=>set_value('address1',$address1));
-$f_address2	= array('id'=>'f_address2', 'class'=>'span12', 'name'=>'address2', 'value'=> set_value('address2',$address2));
-$f_first	= array('id'=>'f_firstname', 'class'=>'span12', 'name'=>'firstname', 'value'=> set_value('firstname',$firstname));
-$f_last		= array('id'=>'f_lastname', 'class'=>'span12', 'name'=>'lastname', 'value'=> set_value('lastname',$lastname));
-$f_email	= array('id'=>'f_email', 'class'=>'span12', 'name'=>'email', 'value'=>set_value('email',$email));
-$f_phone	= array('id'=>'f_phone', 'class'=>'span12', 'name'=>'phone', 'value'=> set_value('phone',$phone));
-$f_city		= array('id'=>'f_city', 'class'=>'span12', 'name'=>'city', 'value'=>set_value('city',$city));
-$f_zip		= array('id'=>'f_zip', 'maxlength'=>'10', 'class'=>'span12', 'name'=>'zip', 'value'=> set_value('zip',$zip));
+$f_company	= array('id'=>'f_company', 'class'=>'col-lg-12', 'name'=>'company', 'value'=> set_value('company',$company));
+$f_address1	= array('id'=>'f_address1', 'class'=>'col-lg-12', 'name'=>'address1', 'value'=>set_value('address1',$address1));
+$f_address2	= array('id'=>'f_address2', 'class'=>'col-lg-12', 'name'=>'address2', 'value'=> set_value('address2',$address2));
+$f_first	= array('id'=>'f_firstname', 'class'=>'col-lg-12', 'name'=>'firstname', 'value'=> set_value('firstname',$firstname));
+$f_last		= array('id'=>'f_lastname', 'class'=>'col-lg-12', 'name'=>'lastname', 'value'=> set_value('lastname',$lastname));
+$f_email	= array('id'=>'f_email', 'class'=>'col-lg-12', 'name'=>'email', 'value'=>set_value('email',$email));
+$f_phone	= array('id'=>'f_phone', 'class'=>'col-lg-12', 'name'=>'phone', 'value'=> set_value('phone',$phone));
+$f_city		= array('id'=>'f_city', 'class'=>'col-lg-12', 'name'=>'city', 'value'=>set_value('city',$city));
+$f_zip		= array('id'=>'f_zip', 'maxlength'=>'10', 'class'=>'col-lg-12', 'name'=>'zip', 'value'=> set_value('zip',$zip));
 
 echo form_input($f_id);
 
@@ -23,34 +23,34 @@ echo form_input($f_id);
 		<div class="alert allert-error hide" id="form-error">
 			<a class="close" data-dismiss="alert">×</a>
 		</div>
-		<div class="row-fluid">
-			<div class="span12">
+		<div class="row">
+			<div class="col-lg-12">
 				<label><?php echo lang('address_company');?></label>
 				<?php echo form_input($f_company);?>
 			</div>
 		</div>
-		<div class="row-fluid">
-			<div class="span6">
+		<div class="row">
+			<div class="col-lg-6">
 				<label><?php echo lang('address_firstname');?></label>
 				<?php echo form_input($f_first);?>
 			</div>
-			<div class="span6">
+			<div class="col-lg-6">
 				<label><?php echo lang('address_lastname');?></label>
 				<?php echo form_input($f_last);?>
 			</div>
 		</div>
-		<div class="row-fluid">
-			<div class="span6">
+		<div class="row">
+			<div class="col-lg-6">
 				<label><?php echo lang('address_email');?></label>
 				<?php echo form_input($f_email);?>
 			</div>
-			<div class="span6">
+			<div class="col-lg-6">
 				<label><?php echo lang('address_phone');?></label>
 				<?php echo form_input($f_phone);?>
 			</div>
 		</div>
-		<div class="row-fluid">
-			<div class="span12">
+		<div class="row">
+			<div class="col-lg-12">
 				<label><?php echo lang('address');?></label>
 				<?php
 				echo form_input($f_address1);
@@ -58,22 +58,22 @@ echo form_input($f_id);
 				?>
 			</div>
 		</div>
-		<div class="row-fluid">
-			<div class="span12">
+		<div class="row">
+			<div class="col-lg-12">
 				<label><?php echo lang('address_country');?></label>
-				<?php echo form_dropdown('country_id', $countries_menu, set_value('country_id', $country_id), 'id="f_country_id" class="span12"');?>
+				<?php echo form_dropdown('country_id', $countries_menu, set_value('country_id', $country_id), 'id="f_country_id" class="col-lg-12"');?>
 			</div>
 		</div>
-		<div class="row-fluid">
-			<div class="span4">
+		<div class="row">
+			<div class="col-lg-4">
 				<label><?php echo lang('address_city');?></label>
 				<?php echo form_input($f_city);?>
 			</div>
-			<div class="span6">
+			<div class="col-lg-6">
 				<label><?php echo lang('address_state');?></label>
-				<?php echo form_dropdown('zone_id', $zones_menu, set_value('zone_id', $zone_id), 'id="f_zone_id" class="span12"');?>
+				<?php echo form_dropdown('zone_id', $zones_menu, set_value('zone_id', $zone_id), 'id="f_zone_id" class="col-lg-12"');?>
 			</div>
-			<div class="span2">
+			<div class="col-lg-2">
 				<label><?php echo lang('address_zip');?></label>
 				<?php echo form_input($f_zip);?>
 			</div>

@@ -1,20 +1,20 @@
 <?php echo form_open('cart/giftcard');?>
     <div class="row" style="margin-top:20px;">
-        <div class="span4">
+        <div class="col-lg-4">
             <div id="primary-img">
                 <?php echo theme_img('giftcard.jpg', lang('giftcard'));?>
             </div>
         </div>
-        <div class="span8">
+        <div class="col-lg-8">
             <div class="row">
-                <div class="span8">
+                <div class="col-lg-8">
                     <h2 style="font-weight:normal"><?php echo lang('giftcard');?></h2>
                 </div>
             </div>
             
             <?php if(is_array($preset_values)):?>
             <div class="row">
-                <div class="span8">
+                <div class="col-lg-8">
                     <div class="control-group">
                         <div class="controls">
                             <label class="radio">
@@ -49,7 +49,7 @@
             
             <?php if($allow_custom_amount):?>
             <div class="row">
-                <div class="span8">
+                <div class="col-lg-8">
                     <div class="control-group">
                         <div class="controls">
                             <label class="radio">
@@ -75,7 +75,7 @@
             </div>
             <?php endif;?>
             <div class="row">
-                <div class="span8">
+                <div class="col-lg-8">
 
                     <label><?php echo lang('giftcard_to');?></label>
                     <?php echo form_input('gc_to_name', set_value('gc_to_name')); ?>
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="span8">
+                <div class="col-lg-8">
                     <input type="submit" class="btn btn-primary" value="<?php echo lang('form_add_to_cart');?>"/>
                 </div>
             </div>

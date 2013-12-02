@@ -10,7 +10,7 @@ echo $download_section;
 ?>
 
 <div class="row">
-	<div class="span4">
+	<div class="col-lg-4">
 		<h3><?php echo lang('account_information');?></h3>
 		<?php echo (!empty($customer['company']))?$customer['company'].'<br/>':'';?>
 		<?php echo $customer['firstname'];?> <?php echo $customer['lastname'];?><br/>
@@ -21,14 +21,14 @@ echo $download_section;
 	$ship = $customer['ship_address'];
 	$bill = $customer['bill_address'];
 	?>
-	<div class="span4">
+	<div class="col-lg-4">
 		<h3><?php echo ($ship != $bill)?lang('shipping_information'):lang('shipping_and_billing');?></h3>
 		<?php echo format_address($ship, TRUE);?><br/>
 		<?php echo $ship['email'];?><br/>
 		<?php echo $ship['phone'];?>
 	</div>
 	<?php if($ship != $bill):?>
-	<div class="span4">
+	<div class="col-lg-4">
 		<h3><?php echo lang('billing_information');?></h3>
 		<?php echo format_address($bill, TRUE);?><br/>
 		<?php echo $bill['email'];?><br/>
@@ -38,19 +38,19 @@ echo $download_section;
 </div>
 
 <div class="row">
-	<div class="span4">
+	<div class="col-lg-4">
 		<h3><?php echo lang('additional_details');?></h3>
 		<?php
 		if(!empty($referral)):?><div><strong><?php echo lang('heard_about');?></strong> <?php echo $referral;?></div><?php endif;?>
 		<?php if(!empty($shipping_notes)):?><div><strong><?php echo lang('shipping_instructions');?></strong> <?php echo $shipping_notes;?></div><?php endif;?>
 	</div>
 
-	<div class="span4">
+	<div class="col-lg-4">
 		<h3 style="padding-top:10px;"><?php echo lang('shipping_method');?></h3>
 		<?php echo $shipping['method']; ?>
 	</div>
 	
-	<div class="span4">
+	<div class="col-lg-4">
 		<h3><?php echo lang('payment_information');?></h3>
 		<?php echo $payment['description']; ?>
 	</div>
