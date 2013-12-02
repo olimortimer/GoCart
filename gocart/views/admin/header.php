@@ -9,8 +9,8 @@
 <link type="text/css" href="<?php echo base_url('assets/css/jquery-ui.css');?>" rel="stylesheet" />
 <link type="text/css" href="<?php echo base_url('assets/css/redactor.css');?>" rel="stylesheet" />
 
-<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-ui.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-ui.min.js');?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js');?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/redactor.min.js');?>"></script>
 

@@ -16,7 +16,7 @@
 <?php echo theme_css('bootstrap-responsive.min.css', true);?>
 <?php echo theme_css('styles.css', true);?>
 
-<?php echo theme_js('jquery.js', true);?>
+<?php echo theme_js('jquery.min.js', true);?>
 <?php echo theme_js('bootstrap.min.js', true);?>
 <?php echo theme_js('squard.js', true);?>
 <?php echo theme_js('equal_heights.js', true);?>
